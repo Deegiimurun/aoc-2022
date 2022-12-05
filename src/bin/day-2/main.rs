@@ -3,7 +3,7 @@ extern crate core;
 use std::cmp::Ordering;
 use std::fs;
 
-#[derive(Copy, Clone, Debug, Eq)]
+#[derive(Copy, Debug, Eq, Clone)]
 enum Hand {
     Rock = 1,
     Paper = 2,
