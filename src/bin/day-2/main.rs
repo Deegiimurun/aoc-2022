@@ -78,7 +78,7 @@ impl Hand {
 }
 
 fn main() {
-    let contents = fs::read_to_string("src/bin/day-2/input.txt").unwrap();
+    let contents = fs::read_to_string("src/bin/day-2/input.txt").unwrap().replace("\r\n","\n");
 
     //Part 1
     let matches: Vec<(Hand, Hand)> = contents

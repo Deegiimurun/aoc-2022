@@ -6,9 +6,9 @@ struct ElfAssignment {
 }
 
 fn main() {
-    let content = fs::read_to_string("src/bin/day-4/input.txt").unwrap();
+    let content = fs::read_to_string("src/bin/day-4/input.txt").unwrap().replace("\r\n","\n");
 
-    let elf_assigment_pairs = content.split("\r\n").map(|line| {
+    let elf_assigment_pairs = content.split('\n').map(|line| {
         let pair_str = line.split(',').collect::<Vec<&str>>();
         let first = pair_str.first().unwrap().split('-').collect::<Vec<&str>>();
         let second = pair_str.last().unwrap().split('-').collect::<Vec<&str>>();

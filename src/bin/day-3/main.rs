@@ -10,7 +10,7 @@ struct Rucksack {
 }
 
 fn main() {
-    let contents = fs::read_to_string("src/bin/day-3/input.txt").unwrap();
+    let contents = fs::read_to_string("src/bin/day-3/input.txt").unwrap().replace("\r\n","\n");
 
     let rucksacks: Vec<Rucksack> = contents.split('\n').map(|line| {
         let first_half = line.to_string()[0..line.len() / 2].to_string();

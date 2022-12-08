@@ -2,7 +2,7 @@ use std::{fs};
 
 
 fn main() {
-    let contents = fs::read_to_string("src/bin/day-1/input.txt").unwrap();
+    let contents = fs::read_to_string("src/bin/day-1/input.txt").unwrap().replace("\r\n","\n");
     let mut net_calories: Vec<i32> = Vec::new();
 
     for calories in contents.split("\n\n") {
