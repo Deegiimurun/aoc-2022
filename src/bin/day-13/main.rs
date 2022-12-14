@@ -140,7 +140,7 @@ fn main() {
         (Packet::parse(left), Packet::parse(right))
     }).collect::<Vec<(Packet, Packet)>>();
 
-    println!("{}", pairs.iter().enumerate().map(|(i, pair)| {
+    println!("Part 1 answer: {}", pairs.iter().enumerate().map(|(i, pair)| {
         match pair.0 < pair.1 {
             true => {
                 i + 1
